@@ -20,6 +20,6 @@
 </div>
 
 <!-- Full fledged nav bar for desktop devices -->
-<div class="hidden flex-row justify-between gap-10 lg:flex">
+<div class="hidden flex-row justify-between gap-10 text-dark-gray-blue lg:flex">
   <NavLinks />
 </div>
