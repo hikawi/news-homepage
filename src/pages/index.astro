@@ -1,4 +1,6 @@
 ---
+import ArticlesContent from "../components/main/ArticlesContent.astro";
+import HeadlineContent from "../components/main/HeadlineContent.astro";
 import NavBar from "../components/nav/NavBar.svelte";
 import PageLayout from "../layouts/PageLayout.astro";
 ---
@@ -8,4 +10,8 @@ import PageLayout from "../layouts/PageLayout.astro";
   description="A homepage for a generic news website, made with a mobile-first workflow and accessibility in mind."
 >
   <NavBar client:load />
+  <main class="flex flex-col ~gap-16/18">
+    <HeadlineContent />
+    <ArticlesContent />
+  </main>
 </PageLayout>

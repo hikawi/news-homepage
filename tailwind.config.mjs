@@ -1,4 +1,4 @@
-import fluid, { extract, screens } from "fluid-tailwind";
+import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,6 +9,9 @@ export default {
     },
     extend: {
       screens,
+      spacing: {
+        18: "4.5rem",
+      },
       colors: {
         "soft-orange": "hsl(35, 77%, 62%)",
         "soft-red": "hsl(5, 85%, 63%)",
@@ -20,8 +23,12 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      fontSize,
       fontSize: {
         paragraph: "15px",
+        "3.5xl": "2rem",
+        "4.5xl": "2.5rem",
+        "5.5xl": "3.5rem",
       },
     },
   },

@@ -1,0 +1,54 @@
+---
+import retroPcs from "../../assets/image-retro-pcs.jpg";
+import laptops from "../../assets/image-top-laptops.jpg";
+import gaming from "../../assets/image-gaming-growth.jpg";
+import { Image } from "astro:assets";
+
+const articles = [
+  {
+    title: "Reviving Retro PCs",
+    subtitle: "What happens when old PCs are given modern upgrades?",
+    img: retroPcs,
+    alt: "An infographics image of old CRT monitors.",
+  },
+  {
+    title: "Top 10 Laptops of 2022",
+    subtitle: "Our best picks for various needs and budgets.",
+    img: laptops,
+    alt: "An image of a red glowing keyboard, typically seen on gaming laptops.",
+  },
+  {
+    title: "The Growth of Gaming",
+    subtitle: "How the pandemic has sparked fresh opportunities.",
+    img: gaming,
+    alt: "An image of a hand holding a floating PlayStation controller.",
+  },
+];
+---
+
+<div class="flex flex-col justify-between gap-8 lg:flex-row">
+  {
+    articles.map((article, idx) => (
+      <div class="flex flex-row gap-6">
+        <Image
+          src={article.img}
+          alt={article.alt}
+          class="h-full w-[6.25rem] shrink-0 grow-0 object-cover"
+        />
+
+        <div class="flex h-full flex-col justify-between gap-3">
+          <span class="text-3.5xl font-bold text-soft-orange">
+            {`0${idx + 1}`}
+          </span>
+          <a
+            href="/"
+            class="text-lg font-extrabold duration-200 hover:text-soft-orange motion-reduce:duration-0"
+          >
+            {article.title}
+          </a>
+          <p class="text-paragraph text-dark-gray-blue">{article.subtitle}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
